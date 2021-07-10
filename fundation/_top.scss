@@ -1,0 +1,58 @@
+body{
+  display: flex;
+
+}
+
+main{
+  width: 100%;
+  
+  
+  
+  #top{
+    height: 700px;
+    background-position: 75% 50%;
+    background-image: url("./image/head-pc.jpg");
+    background-size:cover ;
+    background-repeat: no-repeat;
+    position:relative;
+
+
+    .key-visual{
+
+      position: absolute;
+      top:25%;
+      right: 2%;
+      background-color: #FCC800;
+      padding: 30px;
+
+      .key-item{
+        margin-bottom:10px;
+        
+        h2{
+          text-align: center;
+          border:2px solid black;
+          background-color: white;
+          line-height: 30px;
+      
+        }
+  
+        p{
+          text-align: center;
+          border:2px solid black;
+          background-color: white;
+          line-height: 65px;
+          padding: 30px;
+         
+       
+        }
+      }
+
+
+    }
+  
+ 
+  }// top
+
+  
+
+}//main

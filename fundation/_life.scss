@@ -1,0 +1,174 @@
+
+    // 4番目
+    #life{
+      background-color: #FCC800;
+      width: 100%;
+
+     .l-inner{
+
+        max-width: 1560px;
+        width: 100%;
+        margin: 0 auto;
+        padding:75px 20px;
+        box-sizing: border-box;
+
+        .l-contents{
+        
+        display: grid;
+        grid-template-columns: minmax(min-content,480px) minmax(min-content,480px) minmax(min-content,480px);
+        gap:30px 30px;
+        align-items: center;
+    
+
+
+
+            .l-items{
+              text-align: center;
+
+              &.first{
+                height: 100%;
+              }
+              
+        
+              .l-top-first{
+                position: relative;
+                align-self:center;
+                vertical-align: bottom!important;
+    
+                img{           
+                  width: 100%;
+                  height: 100%;
+                 
+                }
+
+                .l-btn{
+                  position: absolute;
+                  top:75%;
+                  left: 40%;
+                  transform: translate(-50%, -50%);
+  
+                  a{
+                    display: block;
+                    padding: 20px 30px;
+                    border: 2px solid #000;
+                    border-radius: 30px;
+                    width: 100%;
+                  }
+                }//btn
+              }
+            
+
+              .l-top{
+                display: block;
+                height: 70%;
+
+                img{
+                  width: 100%;
+                  height: 100%;
+                  object-fit: cover;
+                  object-position: center;
+                }
+
+              }//top
+
+
+
+             
+
+
+              .l-bottom{
+                background-color: #fff;
+                text-align: left;
+                padding: 20px;
+                height: 30%;
+                box-sizing: border-box;
+            
+               
+
+                p{
+
+                  &:first-child{
+                    padding-bottom:15px ;
+                  }
+
+                }                
+              }
+
+
+
+
+
+            }//items
+            
+        }//contens
+
+     }//inner
+    
+    }//section
+
+
+      // &__title__info{
+      //   width: calc(100%/3-80px);
+      //   max-width:469px;
+      //   height: 432px;
+      //   display: inline-block;
+      //   margin: 0 auto 30px;
+      //   vertical-align: top;
+       
+        
+        
+      //   &__top{
+      //     width: 100%;
+      //     height: 65%;
+
+          
+      //     &>img{
+      //       width: 100%;
+      //       height: 100%;
+      //       object-fit: cover;
+      //       border-top-left-radius: 20px;
+      //     }
+
+      //   }
+
+      //   &.first{
+      //     order:-1;
+      //   }
+
+      //   &__btn{
+      //     margin-top: 30px;
+      //     display: inline-block;
+      //     text-align: center;
+
+      //     &>a{
+      //       padding:20px 30px;
+      //       border:1px solid black;
+      //       border-radius: 35px;
+      //       display: block;
+
+      //       &:hover{
+      //         background-color: white;
+      //         color:black;
+      //         cursor: pointer;
+      //       }
+           
+      //     }
+      //   }
+        
+      //   &__bottom{
+      //     width: 100%;
+      //     height: 35%;
+      //     background-color: white;
+      //     text-align: left;
+      //     border-bottom-right-radius: 20px;
+      //     padding:30px;
+      //     box-sizing: border-box;
+    
+      
+      //     &>p{
+            
+      //       font-size:16px;
+      //       line-height:2em;
+      //     }
+      //   }
+      // }

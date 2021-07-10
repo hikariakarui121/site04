@@ -1,0 +1,54 @@
+
+#seminor{
+  background-color: #FCC800;
+  width:100%;
+
+  .s__item{
+    margin-bottom: 40px;
+    text-align: left;
+    max-width: 1560px;
+    width: 100%;
+    margin: 0 auto;
+    padding:75px 20px;
+    box-sizing: border-box;
+    
+
+    .s-title{
+
+      display: flex;
+      align-items: center;
+    
+        h1{
+          font-size: 45px;
+          display: inline-block;
+          
+          &>span{
+            border-top:2px solid black;
+            width:75px;
+            height: 0px;
+            display: inline-block;
+            vertical-align: middle!important;
+            }
+          }
+    
+          .semi-text{
+          font-size: 22px;
+          display: inline-block;
+          margin-left: 30px;
+          background-color: #000;
+          color:white;
+          padding:3px 25px;
+          border-radius: 50px;
+
+        
+          }
+     }//s-title
+
+
+
+        p{
+          padding-top:30px;
+        }
+
+  }//s-item
+}//seminor
