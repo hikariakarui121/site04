@@ -30,6 +30,20 @@ header{
         right: 0;
         z-index: 100;
         background-color: black;
+
+        &>h1{
+          &>a{
+
+            img.toppic1{
+              display: none;
+           }
+
+            img.toppic2{
+              display: block;
+              padding-top:10px;
+            }
+          }//a
+        }
       }
 
 
@@ -44,14 +58,21 @@ header{
         a{
           img{
             width: 140px;
+
             
+            &.toppic1{
+              display: block;
+            }
+            &.toppic2{
+              display: none;
+            }
             @include OverTab{
               width: 155px;
               height: 50px;
             }
-          }
-        }
-      }
+          } //img
+        }//a
+      }//h1
     }//logo
 
     #nav{
@@ -516,6 +537,4 @@ header{
     
     
   }//inner
-
-  
 }//header

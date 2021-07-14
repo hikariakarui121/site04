@@ -36,6 +36,15 @@ header .h-inner .logo.-open {
   background-color: black;
 }
 
+header .h-inner .logo.-open > h1 > a img.toppic1 {
+  display: none;
+}
+
+header .h-inner .logo.-open > h1 > a img.toppic2 {
+  display: block;
+  padding-top: 10px;
+}
+
 @media screen and (min-width: 1000px) {
   header .h-inner .logo {
     position: static;
@@ -45,6 +54,14 @@ header .h-inner .logo.-open {
 
 header .h-inner .logo h1 a img {
   width: 140px;
+}
+
+header .h-inner .logo h1 a img.toppic1 {
+  display: block;
+}
+
+header .h-inner .logo h1 a img.toppic2 {
+  display: none;
 }
 
 @media screen and (min-width: 1000px) {
@@ -735,6 +752,14 @@ main #top .key-visual .key-item p {
   width: 50%;
   border-top-left-radius: 8px;
   border-bottom-left-radius: 8px;
+  background-color: white;
+  color: black;
+  border: 1px solid black;
+  -webkit-box-sizing: border-box;
+          box-sizing: border-box;
+}
+
+#news .news__inner .news-top .news__info a.left.-active {
   background-color: black;
   color: white;
 }
@@ -757,6 +782,11 @@ main #top .key-visual .key-item p {
   vertical-align: bottom;
 }
 
+#news .news__inner .news-top .news__info a.right.-active {
+  background-color: black;
+  color: white;
+}
+
 @media screen and (min-width: 800px) {
   #news .news__inner .news-top .news__info a.right {
     width: 140px;
@@ -768,6 +798,10 @@ main #top .key-visual .key-item p {
 }
 
 #news .news__inner .news__contents {
+  display: none;
+}
+
+#news .news__inner .news__contents.-active {
   display: -ms-grid;
   display: grid;
   gap: 20px 20px;
@@ -781,7 +815,7 @@ main #top .key-visual .key-item p {
 }
 
 @media screen and (min-width: 800px) {
-  #news .news__inner .news__contents {
+  #news .news__inner .news__contents.-active {
     -ms-grid-columns: minmax(min-content, 570px) minmax(min-content, 570px);
         grid-template-columns: minmax(-webkit-min-content, 570px) minmax(-webkit-min-content, 570px);
         grid-template-columns: minmax(min-content, 570px) minmax(min-content, 570px);
@@ -789,7 +823,7 @@ main #top .key-visual .key-item p {
 }
 
 @media screen and (min-width: 1500px) {
-  #news .news__inner .news__contents {
+  #news .news__inner .news__contents.-active {
     -ms-grid-columns: minmax(min-content, 520px) minmax(min-content, 520px) minmax(min-content, 520px);
         grid-template-columns: minmax(-webkit-min-content, 520px) minmax(-webkit-min-content, 520px) minmax(-webkit-min-content, 520px);
         grid-template-columns: minmax(min-content, 520px) minmax(min-content, 520px) minmax(min-content, 520px);
@@ -904,8 +938,17 @@ main #top .key-visual .key-item p {
   background-color: #FCC800;
 }
 
+#news .news__inner .news__contents .n-link a .n_bottom p {
+  line-height: 20px;
+}
+
 #news .news__inner .news-btn {
+  display: none;
+}
+
+#news .news__inner .news-btn.-active {
   display: inline-block;
+  text-align: center;
 }
 
 #news .news__inner .news-btn a {
@@ -913,9 +956,18 @@ main #top .key-visual .key-item p {
   background-color: #fff;
   color: black;
   text-decoration: none;
-  padding: 40px 120px;
   border-radius: 50px;
   border: 1px solid black;
+  font-size: 12px;
+  white-space: nowrap;
+  padding: 30px 70px;
+}
+
+@media screen and (min-width: 600px) {
+  #news .news__inner .news-btn a {
+    padding: 40px 120px;
+    font-size: 16px;
+  }
 }
 
 #news .news__inner .news-btn a .fa-align-justify {
@@ -1433,6 +1485,70 @@ a {
 
 #sns .s-inner .s-twitter > div {
   margin: 0px !important;
+}
+
+section#sub {
+  display: block;
+}
+
+@media screen and (min-width: 1500px) {
+  section#sub {
+    display: none;
+  }
+}
+
+section#sub .key-visual {
+  padding: 20px;
+}
+
+section#sub .key-visual .key-item {
+  text-align: center;
+}
+
+section#sub .key-visual .key-item.tops {
+  position: relative;
+}
+
+section#sub .key-visual .key-item.secs {
+  position: relative;
+}
+
+section#sub .key-visual .key-item h2 {
+  position: absolute;
+  left: 50%;
+  border: 2px solid #000;
+  width: 220px;
+  padding: 8px 0px;
+  position: relative;
+  -webkit-transform: translate(-50%, 50%);
+          transform: translate(-50%, 50%);
+  background-color: #fff;
+  z-index: 100;
+  font-size: 14px;
+}
+
+@media screen and (min-width: 600px) {
+  section#sub .key-visual .key-item h2 {
+    font-size: 20px;
+  }
+}
+
+section#sub .key-visual .key-item p {
+  border: 2px solid #000;
+  padding: 10px;
+  padding-top: 15px;
+  line-height: 2.0em;
+  font-size: 16px;
+  white-space: nowrap;
+  margin-bottom: 15px;
+}
+
+@media screen and (min-width: 600px) {
+  section#sub .key-visual .key-item p {
+    margin-bottom: 30px;
+    font-size: 24px;
+    padding: 20px;
+  }
 }
 
 a {
