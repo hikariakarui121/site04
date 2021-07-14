@@ -8,19 +8,22 @@
     margin: 0 auto;
     padding: 70px 20px;
     box-sizing: border-box;
+
   
-
-
     .p-title{
       display: block;
       padding-bottom: 40px;
       display: flex;
       align-items: flex-end;
+      flex-wrap: wrap;
   
        h1{
-        font-size: 44px;
+        font-size: 32px;
         padding-right: 25px;
 
+        @include MidTab{
+          font-size: 44px;
+        }
     
     
        &>span{
@@ -29,12 +32,22 @@
          width:75px;
          height: 0px;
          vertical-align: middle;    
-         margin-right: 25px;
+         margin-right: 15px;
          }
         }
   
         p{
-         font-size: 22px;
+          font-size: 16px;
+          padding-top:15px;
+
+          @include SmallTab{
+            padding-top:0px;
+          }
+
+          @include MidTab{
+            font-size: 22px;
+          }
+         
        }
     }//title
 
@@ -42,13 +55,19 @@
     .swiper-container, .slider2 {
       //ここの高さはページネーションの位置調整のため 
       box-sizing: border-box;
-      height: 285px;
-      overflow: hidden; 
+      overflow: hidden!important;
+      width: 100%;
+      display: block;
+      padding-bottom: 38px;
+
+    
+    
     
      .swiper-slide>img{
         border-bottom-right-radius: 20px;
         border-top-left-radius: 20px;
         width: 100%;
+
       }
 
       .swiper-pagination-bullet {

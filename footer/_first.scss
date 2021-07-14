@@ -2,12 +2,27 @@
 
 footer{
   width: 100%;
+  position: static;
+
+  // @include MidTab{
+  //   position: fixed;
+
+  // }
 }
 
 
 #f-first{
   background-color: #313131;
   width: 100%;
+
+  .flogo{
+    padding-top:50px ;
+    padding-left:30px ;
+
+    @include MidTab{
+      display: none;
+    }
+  }
 
   
   .f-inner{
@@ -17,25 +32,67 @@ footer{
     margin:0 auto;
     display: flex;
     justify-content: center;
-    padding: 70px 50px 50px ;
+    flex-direction: column;
+    padding: 20px 30px 50px ;
     box-sizing: border-box;
+
+    @include MidTab{
+      padding-top: 50px;
+      flex-direction: row;
+    }
+
         .f-nav{
+          // padding-right:50px;
+          order: 1;
+          // width: 100%;
+          @include MidTab{
           padding-right:50px;
+   
+  
+          }
     
           .f-logo{
-            padding-bottom: 25px;
+            display: none;
     
             img{
               width: 240px;
               height: auto;
             }
+
+            @include MidTab{
+              display: block;
+              padding-bottom: 25px;
+
+            }
           }
     
           ul{
+            padding-top: 30px;
+            display: flex;
+            flex-wrap: wrap;
+            justify-content: space-between;
+            flex-direction: row;
+            width: 100%;
+
+            @include MidTab{
+              flex-direction: column;
+              padding-top: 0px;
+            }
     
             li{
               list-style: none;
               font-size: 16px;
+              padding: 5px;
+              width: 100%;
+              display: inline-block;
+
+              @media screen and (min-width:450px){
+                width: 45%;
+              }
+
+              @include MidTab{
+                width: 100%;
+              }
          
               
               a{
@@ -45,12 +102,21 @@ footer{
                 padding-bottom: 15px;
                 padding-left: 15px;
                 box-sizing: border-box;
-                width: 240px;
+                max-width: 600px;
+                width: 100%;
                 display: block;
-                border:1px solid #fff;
+                border:2px solid #fff;
                 border-top-left-radius: 15px;
                 border-bottom-right-radius: 15px;
-                margin-bottom:10px;
+                // margin-bottom:10px;
+                white-space: nowrap;
+
+                &:hover{
+                  background-color: #fff;
+                  color: black;
+                }
+
+                
               }
             }
           }
@@ -59,7 +125,16 @@ footer{
         }//fnav
 
         .f-mainbar{
-          flex:1;
+          // width: 60%;
+          flex: 1;
+          order: -1;
+          box-sizing: border-box;
+          // min-width: 0;
+
+          @include MidTab{
+            order: 2;
+          }
+    
 
           .topbar{
             background-color: #fff;
@@ -67,10 +142,21 @@ footer{
             display: flex;
             align-items: center;
             justify-content: space-between;
-            padding: 30px;
+            padding: 20px;
             flex-wrap: wrap;
+            // width: 100%;
+            min-width: 0;
+            
 
             .topbar-left{
+              width: 100%;
+              border-bottom: 1px solid $black;
+              padding-bottom: 15px;
+
+              @include KeyTab{
+                width: 50%;
+                border-bottom: none;
+              }
 
               h4{
                 padding-bottom: 15px;
@@ -79,7 +165,6 @@ footer{
               .bar-image{
                 display: flex;
                 align-items: center;
-
                 padding-bottom: 15px;
                 
                 img{  
@@ -87,8 +172,14 @@ footer{
                 }
 
                 h3{
-                  font-size: 30px;
+                  padding-left: 10px;
+                  font-size: 28px;
                   color: red;
+
+                  @include SmartTab{
+                    font-size: 40px;
+                  }
+
 
                 }
                }//image
@@ -100,24 +191,52 @@ footer{
             }//left
 
             .topbar-right{
+              padding-top:20px;
               display: flex;
               text-align: center;
               align-items: center;
-              position: relative;
+              flex-direction: column;
+              width: 100%;
+              
+              @include SmartTab{
+                flex-direction: row;
+                width: 100%;
+              }
+           
+              
+              @include KeyTab{
+                width: 50%;
+                position: relative;
+              }
+             
 
               a{
                 display: inline-block;
                 background-color:$orange;
-                padding:20px 0;
+                padding:20px 0px;
                 color:$black;
                 border: 1px solid $black;
                 text-decoration: none;
-                width: 285px;
                 border-radius: 5px;
+                max-width: 450px;
+                font-size: 14px;
+                white-space: nowrap;
+                width: 100%;
+
+
+                &:hover{
+                  background-color: #fff;
+                  color: black;
+                }
                 
                 
                 & +a{
-                  margin-left: 30px;
+                 
+                  margin-top: 10px;
+                  @include SmartTab{
+                    margin-top: 0px;
+                    margin-left: 30px;
+                  }
                 }
 
 
@@ -140,13 +259,36 @@ footer{
 
           .bot-bar{
             display: grid;
-            grid-template-columns: minmax(min-content,350px) minmax(min-content,350px) minmax(min-content,350px);
+            grid-template-columns: minmax(min-content,800px);
             grid-auto-rows: auto;
-            gap:20px 20px;
+            gap:10px;
+
+            @include MidTab{
+              gap:20px 20px;
+            }
+
+            @include OverTab{
+              grid-template-columns: minmax(min-content,600px) minmax(min-content,600px);
+            }
+
+            @include SoverTab{
+              grid-template-columns: minmax(min-content,400px) minmax(min-content,400px) minmax(min-content,400px);
+
+            }
 
             .sec1{
-            
-                padding-top: 40px;
+              // padding-top: 10px;
+              &:first-child{
+                padding-top: 10px;
+
+                @include MidTab{
+                  padding-top: 40px;
+                }
+              }
+              
+              @include MidTab{
+                  padding-top: 40px;
+                }
 
               h3{
                 position: relative;
@@ -161,6 +303,12 @@ footer{
                   border-top-left-radius: 15px;
                   border-bottom-right-radius: 15px;
 
+
+                &:hover{
+                  background-color: #fff;
+                  color: black;
+                }
+
                 }
 
                 &::after{
@@ -173,7 +321,12 @@ footer{
               }
 
               .sec-items{
-                padding-left: 20px;
+                display: none;
+                
+                @include MidTab{
+                  display: block;
+                  padding-left: 20px;
+                }
 
                 ul{
                   padding-bottom: 15px;
@@ -181,10 +334,16 @@ footer{
                   li{
                     list-style: none;
                     margin-top:15px;
+
   
                     a{
                       color: $white;
                       text-decoration: none;
+
+
+                      &:hover{
+                        opacity: 0.7;
+                      }
 
                     }
                   }
