@@ -7,7 +7,7 @@ section#sub{
     display: none;
   }
 
-  .key-visual{
+  .key-visual.sub{
     padding: 20px;
 
     .key-item{
@@ -58,10 +58,10 @@ section#sub{
           padding: 20px;
 
         }
-      }
+      }//p
 
-    }
-  }
+    }//keyitem
+  }//keyvisual
 
 
 

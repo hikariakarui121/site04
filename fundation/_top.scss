@@ -6,9 +6,6 @@
 
 
 main{
-  // padding: 0px;
- 
-  // padding:77px 0px 0px 0px;
   width: 100%;
   
   @include OverTab{
@@ -19,100 +16,238 @@ main{
   }
   
   #top{
-    
-    // background-position:left 50% bottom 0%;
-    background-position:center;
-    background-image: url('./image/head-sp.jpg');
-    background-size:cover;
-    background-repeat: no-repeat;
-    position:relative;
-    height: 330px;
-    
-    // background-origin: content-box;
 
 
-    // box-sizing: content-box;
-
-    @include SmallTab{
-      background-position: 75% 50%;
-      height: 400px;
-    }
+    .top-visual{
+ 
    
-    @include MidTab{
-      height: 500px;
-      background-position: 75% 50%;
-    }
+      .topv-image{
 
+        img.sp{
+          display: block;
+          width: 100%;
+          height: 330px;
+          object-fit:cover ;
+          object-position: center;
 
-    @include KeyTab{
-      background-image: url("./image/head-pc.jpg");
-      background-position: 75% 50%;
-      background-size:cover ;
-      height: 700px;
-    }
+          @media screen and (min-width: 562px) {
+            height: 450px;
+          }
 
+          @media screen and (min-width: 760px) {
+            height: 590px;
+          }
 
-    .key-visual{
-      // padding-top: 700px;
+          @include KeyTab{
+            display: none;
+          }
+        }
+
+        img.pc{
+          display: none;
+          width: 100%;
+          height: 660px;
+          object-fit:cover ;
+          object-position: center;
+
+          @include KeyTab{
+            display: block;
+          }
+
+          @include SoverTab{
+
+            height: 780px;
+          }
+
+          @include SPoverTab{
+            height: 1000px;
+          }
+          @include SSPoverTab{
+            height: 1280px;
+          }
+        }
+      }
+    }//top.visual
+    
+
+    .key-visual.fi{
       display: none;
       
-      @include KeyTab{  
+      @include SoverTab{  
         display: block; 
         position: absolute;
-        display: block;
-        position: absolute;
-        top:25%;
-        right: 10px;
+        top:200px;
+        left:calc(50% + 370px);
         background-color: #FCC800;
-        padding: 15px;
+        padding: 0 15px;
+        padding-bottom: 20px;
+       }
+
+       @include SPoverTab{
+        top:250px;
+        left:calc(50% + 450px);
+        padding: 0 20px;
+        padding-bottom: 25px;
+       }
+
+       @include SSPoverTab{
+        top:320px;
+        left:calc(50% + 550px);
+        padding: 0 30px;
+        padding-bottom: 35px;
        }
       
-      
-      @include SSoverTab{
-        right: 2%;
-        padding: 30px;
-      }
-
-    
-
 
       .key-item{
-        margin-bottom:10px;
-
-
-
-
+        text-align: center;
         
+        &.tops{
+          position: relative;
+        }
+        &.secs{
+          position: relative;
+        }
+  
+  
         h2{
-          text-align: center;
-          border:2px solid black;
-          background-color: white;
-          line-height: 30px;
-      
+          position: absolute;
+          left:50%;
+          border: 2px solid $black;
+          width: 220px;
+          padding:16px 0px;
+          position: relative;
+          transform: translate(-50%, 50%);
+          background-color: $white;
+          z-index: 100;
+          font-size:16px;
+          white-space: nowrap;
+
+          @include SPoverTab{
+            font-size:18px;
+          }
+
+          
+          @include SSPoverTab{
+            font-size:22px;
+            width: 300px;
+          }
         }
   
         p{
-          text-align: center;
-          border:2px solid black;
-          background-color: white;
-          line-height: 65px;
+          border: 2px solid $black;
           padding: 10px;
-         
+          padding-top: 30px;
+          line-height: 2.0em;
+          font-size: 18px;
+          white-space: nowrap;
+          margin-bottom: 15px;
+          background-color: $white;
 
-          @include SSoverTab{
-            padding: 30px;
+          @include SPoverTab{
+            font-size:20px;
           }
-         
-       
-        }
+          @include SSPoverTab{
+            font-size:24px;
+          }
+          
+        }//p
+  
+      }//keyitem
+    }//keyvisual
+
+
+    
+
+    .swiper-container.slider1 {
+      position: absolute;
+      top: 115px;
+      left: 50%;
+      transform: translateX(-50%);
+      box-sizing: border-box;
+      overflow: hidden!important;
+      display: block;
+      //ここの高さはページネーションの位置調整のため 
+      padding-bottom: 30px;
+      width: 335px;
+
+      @media screen and (min-width: 562px) {
+        top: 125px;
+        width: 460px;
+      }
+      @media screen and (min-width: 760px) {
+        top: 145px;
+        width: 600px;
+      }
+      @include OverTab{
+        top: 65px;
+        width: 600px;
+        left:calc(50% + 110px);
+      }
+      @include KeyTab{
+        top: 160px;
+        width: 515px;
+        left:calc(50% + 45px);
+      }
+      @include SoverTab{
+        top: 195px;
+        width: 600px;
+        left:calc(50% + 30px);
+        padding-bottom: 40px;
+      }
+      @include SPoverTab{
+        top: 195px;
+        width: 600px;
+        left:calc(50% + 30px);
+        padding-bottom: 40px;
+      }
+      @include SPoverTab{
+        top: 245px;
+        width: 780px;
+        left:calc(50% + 10px);
+        padding-bottom: 40px;
+      }
+      
+      @include SSPoverTab{
+        top: 285px;
+        width: 900px;
+        left:calc(50% - 5px);
+        padding-bottom: 40px;
+      }
+  
+      
+      @include SSPoverTab{
+        top: 315px;
+        width: 1000px;
+        left:calc(50% - 20px);
+        padding-bottom: 40px;
+      }
+  
+  
+    
+    
+    
+     .swiper-slide>img{
+        // border-bottom-right-radius: 20px;
+        // border-top-left-radius: 20px;
+        width: 100%;
+
       }
 
+      .swiper-pagination-bullet {
+        background:$white; 
+        //デフォルトでかなり低い値
+        opacity: 0.9;
+        
+       
+      }
 
-    }
+      .swiper-pagination-bullet-active {
+        background: #ffd700; /* 色：黄色 */
+      }
+    }//.swiper-container, .slider2 
+
+
   
  
   }// top
-
-  
-
 }//main

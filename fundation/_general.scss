@@ -49,6 +49,21 @@ a{
     @content; 
   }
 }
+@mixin SPoverTab {
+  @media screen and(min-width:1700px){
+    @content; 
+  }
+}
+@mixin SSPoverTab {
+  @media screen and(min-width:2150px){
+    @content; 
+  }
+}
+@mixin MaxTab {
+  @media screen and(min-width:2450px){
+    @content; 
+  }
+}
 
 
 
