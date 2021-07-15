@@ -4,6 +4,27 @@ a {
   color: #000;
 }
 
+#page-icon {
+  position: fixed;
+  bottom: 100px;
+  right: 0px;
+  z-index: 1000;
+}
+
+#page-icon a {
+  color: #000;
+  display: inline-block;
+  padding: 15px;
+  background-color: rgba(255, 255, 255, 0.7);
+  font-weight: bold;
+  border-top-left-radius: 5px;
+  border-bottom-left-radius: 5px;
+}
+
+#page-icon a:hover {
+  cursor: pointer;
+}
+
 header {
   position: relative;
 }
@@ -563,6 +584,27 @@ header .h-inner #buttons .nav-btns span:nth-child(6) {
 a {
   text-decoration: none;
   color: #000;
+}
+
+#page-icon {
+  position: fixed;
+  bottom: 100px;
+  right: 0px;
+  z-index: 1000;
+}
+
+#page-icon a {
+  color: #000;
+  display: inline-block;
+  padding: 15px;
+  background-color: rgba(255, 255, 255, 0.7);
+  font-weight: bold;
+  border-top-left-radius: 5px;
+  border-bottom-left-radius: 5px;
+}
+
+#page-icon a:hover {
+  cursor: pointer;
 }
 
 .body {
@@ -1388,6 +1430,27 @@ a {
   color: #000;
 }
 
+#page-icon {
+  position: fixed;
+  bottom: 100px;
+  right: 0px;
+  z-index: 1000;
+}
+
+#page-icon a {
+  color: #000;
+  display: inline-block;
+  padding: 15px;
+  background-color: rgba(255, 255, 255, 0.7);
+  font-weight: bold;
+  border-top-left-radius: 5px;
+  border-bottom-left-radius: 5px;
+}
+
+#page-icon a:hover {
+  cursor: pointer;
+}
+
 #life {
   background-color: #FCC800;
   width: 100%;
@@ -1640,6 +1703,9 @@ a {
   -webkit-box-align: center;
       -ms-flex-align: center;
           align-items: center;
+  -webkit-box-pack: center;
+      -ms-flex-pack: center;
+          justify-content: center;
   margin: 0 auto;
   max-width: 1560px;
   width: 100%;
@@ -1740,6 +1806,27 @@ section#sub .key-visual.sub .key-item p {
 a {
   text-decoration: none;
   color: #000;
+}
+
+#page-icon {
+  position: fixed;
+  bottom: 100px;
+  right: 0px;
+  z-index: 1000;
+}
+
+#page-icon a {
+  color: #000;
+  display: inline-block;
+  padding: 15px;
+  background-color: rgba(255, 255, 255, 0.7);
+  font-weight: bold;
+  border-top-left-radius: 5px;
+  border-bottom-left-radius: 5px;
+}
+
+#page-icon a:hover {
+  cursor: pointer;
 }
 
 footer {
@@ -2345,6 +2432,27 @@ footer {
 a {
   text-decoration: none;
   color: #000;
+}
+
+#page-icon {
+  position: fixed;
+  bottom: 100px;
+  right: 0px;
+  z-index: 1000;
+}
+
+#page-icon a {
+  color: #000;
+  display: inline-block;
+  padding: 15px;
+  background-color: rgba(255, 255, 255, 0.7);
+  font-weight: bold;
+  border-top-left-radius: 5px;
+  border-bottom-left-radius: 5px;
+}
+
+#page-icon a:hover {
+  cursor: pointer;
 }
 
 .h-second, .h-third, .h-forth, .h-fifth, .h-sixth, .h-seventh, .h-eighth {

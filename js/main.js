@@ -129,6 +129,39 @@ var slider2 = new Swiper('.slider2', {
         })
       });
 
+        let pageTop = $("#page-icon");
+        pageTop.hide();
+
+      // / 80pxスクロールしたらボタン表示
+        $ (window).scroll(function () {
+            if ($(this).scrollTop() > 80) {
+            pageTop.fadeIn(300);
+        } else {
+            pageTop.fadeOut(300);
+        }
+        });
+    
+        pageTop.click(function () {
+            $("body, html").animate({ scrollTop: 0}, 500);
+            return false;
+        })
+
+
+
+
+        // const footer =document.querySelector('.footer');
+        // const cb =function(entries, observer){
+        //   entries.forEach(entry => {
+        //     if(entry.isIntersecting){
+        //       entry.target.classList.add('-avtive');
+        //     } else{
+        //       entry.target.classList.remove('-avtive');
+        //     }
+        //   });
+        // }
+
+        // const io = new IntersectionObserver(cb);
+        // io.observe();
 
 
       

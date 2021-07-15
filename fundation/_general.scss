@@ -67,3 +67,26 @@ a{
 
 
 
+#page-icon {
+  position: fixed;
+  bottom:100px;
+  right: 0px;
+  z-index: 1000;
+
+  a{
+    color: $black;
+    display:inline-block;
+    padding: 15px;
+    background-color: rgba($color: white, $alpha: 0.7);
+    font-weight: bold;
+    border-top-left-radius: 5px;
+    border-bottom-left-radius: 5px;
+
+    &:hover{
+      cursor: pointer;
+    }
+  }
+  
+}
+
+
