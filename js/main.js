@@ -69,9 +69,8 @@ var slider2 = new Swiper('.slider2', {
     // ボタンヘッダー
     $(function(){
       $('.fsec').on('click',function(){
-          $('.fsec-item').toggleClass('-open');
           $('.fsec-btn').toggleClass('-open');
-      
+          $(this).next().slideToggle();
       })
     });
 
@@ -105,8 +104,12 @@ var slider2 = new Swiper('.slider2', {
         
       } else{
         
+
+        // ヘッダースマホボタン
         $('.accordion').on('click',function(){
-            $(this).next().slideToggle();        
+            $(this).next().slideToggle(); 
+            $(this).addClass('-open');
+                   
         })
 
         };
@@ -147,21 +150,26 @@ var slider2 = new Swiper('.slider2', {
         })
 
 
+//フッターを全画面にするためにヘッダーのfixedを外す操作
+        const header =document.querySelector('.h-inner');
+        const footer =document.querySelector('.footer');
+      
+        const cb =function(entries, observer){
+          entries.forEach(entry => {
+            if(entry.isIntersecting){
+              header.classList.add('-inview');
+              console.log('おはよう');
+            } else{
+              header.classList.remove('-inview');
+            }
+          });
+        };
+        const options ={
+         rootMargin: "0px 0px 300px 0px",
+        };
 
-
-        // const footer =document.querySelector('.footer');
-        // const cb =function(entries, observer){
-        //   entries.forEach(entry => {
-        //     if(entry.isIntersecting){
-        //       entry.target.classList.add('-avtive');
-        //     } else{
-        //       entry.target.classList.remove('-avtive');
-        //     }
-        //   });
-        // }
-
-        // const io = new IntersectionObserver(cb);
-        // io.observe();
+        const io = new IntersectionObserver(cb, options);
+        io.observe(footer);
 
 
       
