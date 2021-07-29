@@ -9,31 +9,30 @@
     flex-direction: column;
     align-items: center;
     justify-content: center;
-    margin: 0 auto;
-    max-width:1560px;
-    width:100%;
     box-sizing: border-box;
     padding-top: 50px;
     padding-bottom: 50px;
+    width:100%;
     
     @include MidTab{
       padding :70px 10px 0px;
       display: flex;
       flex-direction: row;
-
       justify-content: space-around;
+      margin: 0 auto;
+      max-width:1560px;
+      width:100%;
 
     }
 
 
     .s-facebook{
-      overflow: hidden;
       padding-bottom: 30px;
     
     }
 
     .s-twitter{
-
+      overflow:hidden ;
       &>div{
         margin: 0px!important;
       }

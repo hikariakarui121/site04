@@ -1173,13 +1173,11 @@ a {
   -webkit-box-pack: center;
       -ms-flex-pack: center;
           justify-content: center;
-  margin: 0 auto;
-  max-width: 1560px;
-  width: 100%;
   -webkit-box-sizing: border-box;
           box-sizing: border-box;
   padding-top: 50px;
   padding-bottom: 50px;
+  width: 100%;
 }
 
 @media screen and (min-width: 800px) {
@@ -1194,12 +1192,18 @@ a {
             flex-direction: row;
     -ms-flex-pack: distribute;
         justify-content: space-around;
+    margin: 0 auto;
+    max-width: 1560px;
+    width: 100%;
   }
 }
 
 #sns .s-inner .s-facebook {
-  overflow: hidden;
   padding-bottom: 30px;
+}
+
+#sns .s-inner .s-twitter {
+  overflow: hidden;
 }
 
 #sns .s-inner .s-twitter > div {
