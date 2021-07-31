@@ -1175,7 +1175,8 @@ a {
           justify-content: center;
   -webkit-box-sizing: border-box;
           box-sizing: border-box;
-  padding: 50px 0px;
+  padding: 50px 20px;
+  text-align: center;
 }
 
 @media screen and (min-width: 800px) {
@@ -1188,24 +1189,45 @@ a {
     -webkit-box-direction: normal;
         -ms-flex-direction: row;
             flex-direction: row;
-    -ms-flex-pack: distribute;
-        justify-content: space-around;
+    -webkit-box-align: start;
+        -ms-flex-align: start;
+            align-items: flex-start;
     margin: 0 auto;
     max-width: 1560px;
-    width: 100%;
   }
 }
 
 #sns .s-inner .s-facebook {
+  width: 100%;
   padding-bottom: 30px;
+  text-align: center;
+}
+
+@media screen and (min-width: 800px) {
+  #sns .s-inner .s-facebook {
+    margin-right: 20px;
+    padding-bottom: 0px;
+    width: 45%;
+  }
 }
 
 #sns .s-inner .s-twitter {
-  overflow-x: hidden;
+  width: 100%;
+  text-align: center;
+}
+
+@media screen and (min-width: 800px) {
+  #sns .s-inner .s-twitter {
+    width: 45%;
+  }
 }
 
 #sns .s-inner .s-twitter > div {
   margin: 0px !important;
+}
+
+#sns #app {
+  text-align: center;
 }
 
 section#sub {
@@ -2185,7 +2207,7 @@ header .h-inner #nav .nav__top > ul > li > a {
 }
 
 header .h-inner #nav .nav__top > ul > li > a.-open::after {
-  content: "-";
+  content: "−";
   top: 25%;
   right: 25px;
   position: absolute;

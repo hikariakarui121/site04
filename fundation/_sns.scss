@@ -10,27 +10,49 @@
     align-items: center;
     justify-content: center;
     box-sizing: border-box;
-    padding: 50px 0px;
-
+    padding: 50px 20px;
+    text-align: center;
     
     @include MidTab{
       padding :70px 10px 50px;
       display: flex;
       flex-direction: row;
-      justify-content: space-around;
+      align-items: flex-start;
+      // justify-content: space-between;
       margin: 0 auto;
       max-width:1560px;
-      width:100%;
+      // width:100%;
+      
 
     }
 
 
     .s-facebook{
+      width: 100%;
       padding-bottom: 30px;
+      // display: flex;
+      // justify-content: center;
+      text-align: center;
+
+      @include MidTab{
+        margin-right: 20px;
+        padding-bottom: 0px;
+        width: 45%;
+       
+      }
     }
 
     .s-twitter{
-      overflow-x: hidden ;
+      // overflow-x: hidden ;
+      width: 100%;
+      text-align: center;
+
+      @include MidTab{
+        width: 45%;
+      
+      }
+    
+
 
       &>div{
         margin: 0px!important;
@@ -39,6 +61,10 @@
     }
   
     
+  }
+
+  #app{
+    text-align: center;
   }
 
 }

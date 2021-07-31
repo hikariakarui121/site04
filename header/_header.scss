@@ -150,7 +150,7 @@ header{
               &.-open{
 
                 &::after{
-                  content: "-";
+                  content: "−";
                   top:25%;
                   right: 25px;
                   position: absolute;
@@ -167,6 +167,7 @@ header{
                   
                   @include OverTab{
                     content: "\03e";
+                  
                   }
                 }//after
                   

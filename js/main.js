@@ -108,7 +108,7 @@ var slider2 = new Swiper('.slider2', {
         // ヘッダースマホボタン
         $('.accordion').on('click',function(){
             $(this).next().slideToggle(); 
-            $(this).addClass('-open');
+            $(this).toggleClass('-open');
                    
         })
 
@@ -132,10 +132,11 @@ var slider2 = new Swiper('.slider2', {
         })
       });
 
+
+ // / 80pxスクロールしたらボタン表示
         let pageTop = $("#page-icon");
         pageTop.hide();
 
-      // / 80pxスクロールしたらボタン表示
         $ (window).scroll(function () {
             if ($(this).scrollTop() > 80) {
             pageTop.fadeIn(300);
