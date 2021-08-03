@@ -1968,11 +1968,12 @@ a {
   transition: -webkit-transform .5s ease;
   transition: transform .5s ease;
   transition: transform .5s ease, -webkit-transform .5s ease;
+  display: none;
 }
 
 .h-second.-open, .h-third.-open, .h-forth.-open, .h-fifth.-open, .h-sixth.-open, .h-seventh.-open, .h-eighth.-open {
-  -webkit-transform: none;
-          transform: none;
+  -webkit-transform: block;
+          transform: block;
 }
 
 @media screen and (min-width: 1000px) {

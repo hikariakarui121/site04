@@ -4,9 +4,10 @@
   position: static;
   transition-delay: 70ms;
   transition: transform .5s ease;
+  display: none;
 
   &.-open{
-   transform: none;
+   transform: block;
   }
   
   @include OverTab{
