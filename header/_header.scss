@@ -42,10 +42,13 @@ header{
         background-color: black;
 
         &>h1{
+          
           &>a{
+            
 
             img.toppic1{
               display: none;
+         
            }
 
             img.toppic2{
@@ -59,7 +62,8 @@ header{
 
       @include OverTab{
         position: static;
-        padding: 30px ;
+        padding: 20px 30px ;
+        
         
       }
      

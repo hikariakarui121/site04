@@ -18,7 +18,7 @@
       text-align: left;
   
 
-      h1{
+      h2{
         display: inline-block;
         font-size: 32px;
        
@@ -59,11 +59,11 @@
 
     .about-contents{
       display: grid;
-      grid-template-columns: minmax(min-content,730px);
-      gap:20px 20px;
+      grid-template-columns: minmax(min-content,700px);
+      gap:20px 35px;
 
       @include MidTab{
-        grid-template-columns: minmax(min-content,730px) minmax(min-content,730px);
+        grid-template-columns: minmax(min-content,700px) minmax(min-content,700px);
       }
 
       .about-item{
